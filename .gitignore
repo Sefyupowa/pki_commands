@@ -1,0 +1,11 @@
+*.csr
+*.pem
+*.crt
+*.cnf
+*.pfx
+*.p12
+*.key
+csr_work/
+routes/
+*.yaml
+*.crl
