@@ -9,9 +9,9 @@ Use this when users report HTTPS or certificate errors.
 Run:
 
 ```bash
-openssl s_client -connect <host>:<port> -servername <host> -showcerts < /dev/null
+openssl s_client -connect <host>:<port>  -showcerts < /dev/null
 
-openssl s_client -connect <host>:<port> -servername <host> -showcerts < /dev/null | openssl x509 -text -noout
+openssl s_client -connect <host>:<port>  -showcerts < /dev/null | openssl x509 -text -noout
 ```
 
 Check these points:
@@ -23,7 +23,7 @@ Check these points:
 ## 2. If you have CA bundle, verify trust
 
 ```bash
-openssl s_client -connect <host>:<port> -servername <host> -CAfile ca_bundle.crt -showcerts < /dev/null
+openssl s_client -connect <host>:<port>  -CAfile ca_bundle.crt -showcerts < /dev/null
 ```
 
 Expected result: `Verify return code: 0`.
