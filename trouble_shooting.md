@@ -12,6 +12,9 @@ Run:
 openssl s_client -connect <host>:<port> -verify 10  -showcerts < /dev/null 
 
 openssl s_client -connect <host>:<port> -verify 10  -showcerts < /dev/null | openssl x509 -text -noout
+
+# Linux: quickly print SAN values from the leaf certificate
+openssl s_client -connect celia-pp.corp.intraxa:443  < /dev/null 2>/dev/null | openssl x509 -noout -ext subjectAltName
 ```
 
 Check these points:
