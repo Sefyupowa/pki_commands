@@ -9,7 +9,7 @@ Use this when users report HTTPS or certificate errors.
 Run:
 
 ```bash
-openssl s_client -connect <host>:<port>  -showcerts < /dev/null
+openssl s_client -connect <host>:<port>  -showcerts < /dev/null 
 
 openssl s_client -connect <host>:<port>  -showcerts < /dev/null | openssl x509 -text -noout
 ```
